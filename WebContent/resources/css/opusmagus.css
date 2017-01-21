@@ -1,0 +1,37 @@
+* {
+	font-family: calibri;	
+}
+
+h1 {
+	font-size: 34pt;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
+html {
+  text-align: center;
+}
+
+body {
+	font-size: 10pt;
+	
+	display: inline-block;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.menuButton {
+	width: 250px; height: 250px; margin: 6px;
+	border: solid 4px black;
+	border-radius: 8px;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.toolbarButton {
+	width: 64px; height: 64px; margin: 4px;
+	border: solid 4px black;
+	border-radius: 6px;
+	display: inline-block;
+	cursor: pointer;
+}
