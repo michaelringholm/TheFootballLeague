@@ -14,12 +14,13 @@ function Match() {
 		data.teamId = teamId;
 		$.ajax({
 			  type: "POST",
-			  url: _this.appRoot + "/match/stats",
+			  url: _this.appRoot + "/match/advance",
 			  data: data,			  
 			  success: function(match) { 
 				console.log("updateMatchWidget() success!");
 								
-				_this.animate(match);
+				_this.updateClock(match);
+				_this.animate(match);				
 				
 				/*$("#leagueName").text(league.Name);
 				for(var i=0; i<league.Teams.length; i++) {
@@ -45,6 +46,10 @@ function Match() {
 				console.log("drawLeagueTable() complete."); 
 			  }
 		});
+	};
+	
+	this.updateClock = function(match) {
+		$("#minutesGone").html(match.MinutesGone);
 	};
 	
 	this.animate = function(match) {

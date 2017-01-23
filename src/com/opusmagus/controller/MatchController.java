@@ -22,8 +22,13 @@ public class MatchController {
 	@Autowired
 	public MatchModel matchModel;
 	
-	@RequestMapping(value = "/stats", method = RequestMethod.POST)
-	public @ResponseBody Match playNext(long teamId) {
-		return matchModel.getMatch(teamId);
+	@RequestMapping(value = "/next", method = RequestMethod.POST)
+	public @ResponseBody Match next(String user) {
+		return matchModel.getMatch(user);
+	}
+	
+	@RequestMapping(value = "/advance", method = RequestMethod.POST)
+	public @ResponseBody Match advance(String user) {
+		return matchModel.advance(user);
 	}
 }

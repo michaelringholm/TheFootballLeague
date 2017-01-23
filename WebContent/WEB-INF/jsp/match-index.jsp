@@ -16,6 +16,7 @@
  	<h1>Match</h1>
  	<h2 style="margin-top:-30px;" id="leagueName"></h2>
  	
+ 	<div id="minutesGone"></div>
  	<canvas id="matchWidget" style="width: 1400px; height: 700px; background-image:url('<c:url value="/resources/images/football-pitch.jpg" />')">
  	</canvas>
  	<div>

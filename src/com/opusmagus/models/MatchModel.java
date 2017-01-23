@@ -1,16 +1,24 @@
 package com.opusmagus.models;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.opusmagus.entity.Ball;
+import com.opusmagus.dao.MatchDAO;
 import com.opusmagus.entity.Match;
 
 @Component
 public class MatchModel {
 
-	public Match getMatch(long teamId) {
-		Match match = new Match(1, 1, 2, 1, 0, 1);
-		match.Ball = new Ball(70,30,100,60);
+	@Autowired
+	MatchDAO matchDao;
+	
+	public Match getMatch(String user) {
+		return matchDao.getMatch(user);
+	}
+
+	public Match advance(String user) {
+		Match match = matchDao.getMatch(user);
+		match.advance();
 		return match;
 	}
 
