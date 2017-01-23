@@ -9,13 +9,13 @@
 	
     <script src="<c:url value="/resources/js/jquery-3.1.1.min.js" />"></script>
     <script src="<c:url value="/resources/js/jquery-ui.min.js" />"></script>
-    <script src="<c:url value="/resources/js/sample.js" />"></script>
+    <script src="<c:url value="/resources/js/main-menu.js" />"></script>
 </head>
 <body>
 	<input id="hfAppRoot" type="hidden" value="<%=request.getContextPath()%>">
 	<h1>The Football League</h1>
 	<div>
-	<img id="btnLeagueTable" src="<c:url value="resources/images/league-table.jpg" />" class="menuButton" alt="">
+	<img id="btnShowLeagueTable" src="<c:url value="resources/images/league-table.jpg" />" class="menuButton" alt="">
 	<img src="<c:url value="resources/images/stadion-icon-256.png" />" class="menuButton" alt="">	
 	<img src="<c:url value="resources/images/football-squad-icon-256.png" />" class="menuButton" alt="">
 	<img src="<c:url value="resources/images/fitness-icon-png-256.png" />" class="menuButton" alt="">
@@ -24,7 +24,7 @@
 	<img src="<c:url value="resources/images/market-256.png" />" class="menuButton" alt="">
 	<img src="<c:url value="resources/images/trophy-icon-256.png" />" class="menuButton" alt="">		
 	<img src="<c:url value="resources/images/directors-256.png" />" class="menuButton" alt="">
-	<img id="playNextMatch" src="<c:url value="resources/images/whistle-icon-256.png" />" class="menuButton" alt="">
+	<img id="btnShowMatchScreen" src="<c:url value="resources/images/whistle-icon-256.png" />" class="menuButton" alt="">
 	</div>
 </body>
 </html>
