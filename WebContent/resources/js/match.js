@@ -50,11 +50,11 @@ function Match() {
 	this.animate = function(match) {
 		var players = {};
 		_this.animatePlayers();
-		_this.animateBall();
+		_this.animateBall(match.Ball);
 	};
 	
-	this.animateBall = function() {
-		_this.drawDot(50,50, "white");
+	this.animateBall = function(ball) {
+		_this.drawDot(ball.LastXPos,ball.LastYPos, "white");
 	};
 		
 	this.animatePlayers = function(players) {
