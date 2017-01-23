@@ -14,7 +14,23 @@
 <body>
 	<input id="hfAppRoot" type="hidden" value="<%=request.getContextPath()%>">
  	<h1>League Table</h1>
- 	<div id="leagueTable"></div>
+ 	<h2 style="margin-top:-30px;" id="leagueName"></h2>
+ 	<div id="leagueTable">
+ 		<div class="leagueTableRowHeader">
+ 			<div class="leagueTableCellHeader">Position</div>
+ 			<div class="leagueTableCellHeader">Team</div>
+ 			<div class="leagueTableCellHeader">GS</div>
+ 			<div class="leagueTableCellHeader">GC</div>
+ 			<div class="leagueTableCellHeader">GD</div>
+ 		</div>
+ 		<div id="leagueTableRowTemplate" class="leagueTableRow">
+ 			<div class="leagueTableCell leaguePosition">1</div>
+ 			<div class="leagueTableCell teamName">Team Name</div>
+ 			<div class="leagueTableCell goalsScored">45</div>
+ 			<div class="leagueTableCell goalsConceeded">21</div>
+ 			<div class="leagueTableCell goalDifference">+24</div>
+ 		</div>
+ 	</div>
  	<div>
  		<img id="btnGoBack" src="<c:url value="/resources/images/arrow-back-icon-64.png" />" class="toolbarButton" alt="">
 		<img id="btnShowHigherDivision" src="<c:url value="/resources/images/arrow-up-64.png" />" class="toolbarButton" alt="">

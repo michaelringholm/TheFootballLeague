@@ -14,27 +14,23 @@ public class LeagueModel {
 
 	public League getLeague(int divisionIndex) {
 		League league = new League();
-		league.DivisionIndex = divisionIndex;
-		league.DivisionName = "Copper League 5";
+		league.Index = divisionIndex;
+		league.Name = "Copper League 5";
 		league.Teams = new ArrayList<Team>();
-		league.Teams.add(new Team(1, 1, "Blue Eagles"));
-		league.Teams.add(new Team(2, 1, "Blue Eagles"));
-		league.Teams.add(new Team(3, 1, "Blue Eagles"));
-		league.Teams.add(new Team(4, 1, "Blue Eagles"));
-		league.Teams.add(new Team(5, 1, "Blue Eagles"));
-		league.Teams.add(new Team(6, 1, "Blue Eagles"));
-		league.Teams.add(new Team(7, 1, "Blue Eagles"));
-		league.Teams.add(new Team(8, 1, "Blue Eagles"));
-		league.Teams.add(new Team(9, 1, "Blue Eagles"));
-		league.Teams.add(new Team(10, 1, "Blue Eagles"));
-		league.Teams.add(new Team(11, 1, "Blue Eagles"));
-		league.Teams.add(new Team(12, 1, "Blue Eagles"));
-		league.Teams.add(new Team(13, 1, "Blue Eagles"));
-		league.Teams.add(new Team(14, 1, "Blue Eagles"));
-		league.Teams.add(new Team(15, 1, "Blue Eagles"));
-		league.Teams.add(new Team(16, 1, "Blue Eagles"));
-		league.Teams.add(new Team(17, 1, "Blue Eagles"));
-		league.Teams.add(new Team(18, 1, "Blue Eagles"));
+		league.Teams.add(new Team(1001, 1, "Blue Eagles", 1, 33, 5));
+		league.Teams.add(new Team(1002, 1, "The Angels", 2, 31, 5));
+		league.Teams.add(new Team(1003, 1, "Bad Boys", 3, 23, 5));
+		league.Teams.add(new Team(1004, 1, "Snowmen", 4, 23, 15));
+		league.Teams.add(new Team(1005, 1, "Vikings", 5, 33, 5));
+		league.Teams.add(new Team(1006, 1, "The Brotherhood", 6, 33, 5));
+		league.Teams.add(new Team(1007, 1, "Blue Eagles", 7, 33, 5));
+		league.Teams.add(new Team(1008, 1, "Blue Eagles", 8, 33, 5));
+		league.Teams.add(new Team(1009, 1, "Blue Eagles", 9, 33, 5));
+		league.Teams.add(new Team(1010, 1, "Blue Eagles", 10, 33, 5));
+		league.Teams.add(new Team(1001, 1, "Blue Eagles", 11, 33, 5));
+		league.Teams.add(new Team(1011, 1, "Blue Eagles", 12, 33, 5));
+		league.Teams.add(new Team(1012, 1, "Blue Eagles", 13, 33, 5));
+		league.Teams.add(new Team(1013, 1, "Blue Eagles", 14, 33, 5));
 		
 		return league;
 	}

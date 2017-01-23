@@ -4,7 +4,7 @@ import java.util.List;
 
 public class League {
 	public long Id;
-	public int DivisionIndex;
-	public String DivisionName;
+	public int Index;
+	public String Name;
 	public List<Team> Teams;
 }

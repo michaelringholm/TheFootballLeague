@@ -8,6 +8,12 @@ h1 {
 	font-style: italic;
 }
 
+h2 {
+	font-size: 24pt;
+	text-transform: uppercase;
+	font-style: italic;
+}
+
 html {
   text-align: center;
 }
@@ -34,4 +40,30 @@ body {
 	border-radius: 6px;
 	display: inline-block;
 	cursor: pointer;
+}
+
+.leagueTableRow {
+	height: 40px;
+	width: 900px;
+	background-color: rgba(129, 214, 87, 0.5);
+	margin: 4px;
+}
+
+.leagueTableCell {
+	display: inline-block;
+	width: 120px;
+	line-height: 40px;
+}
+
+.leagueTableRowHeader {
+	height: 40px;
+	width: 900px;
+	background-color: rgba(136, 51, 136, 0.5);
+	margin: 4px;
+}
+
+.leagueTableCellHeader {
+	display: inline-block;
+	width: 120px;
+	line-height: 40px;
 }

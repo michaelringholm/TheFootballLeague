@@ -24,7 +24,7 @@
 	<img src="<c:url value="resources/images/market-256.png" />" class="menuButton" alt="">
 	<img src="<c:url value="resources/images/trophy-icon-256.png" />" class="menuButton" alt="">		
 	<img src="<c:url value="resources/images/directors-256.png" />" class="menuButton" alt="">
-	<img src="<c:url value="resources/images/whistle-icon-256.png" />" class="menuButton" alt="">
+	<img id="playNextMatch" src="<c:url value="resources/images/whistle-icon-256.png" />" class="menuButton" alt="">
 	</div>
 </body>
 </html>

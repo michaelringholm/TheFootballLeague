@@ -19,9 +19,20 @@ function League() {
 			  success: function(league) { 
 				console.log("drawLeagueTable() success!");
 				
+				$("#leagueName").text(league.Name);
 				for(var i=0; i<league.Teams.length; i++) {
-					$("#leagueTable").append("<div>" + league.Teams[i].Name + "</div>");
+					var leagueTableRow = $("#leagueTableRowTemplate").clone();
+					$(leagueTableRow).removeAttr("id");
+					var team = league.Teams[i];
+					$(leagueTableRow).find(".leaguePosition").text(team.LeaguePosition);
+					$(leagueTableRow).find(".teamName").text(team.Name);
+					$(leagueTableRow).find(".goalsScored").text(team.GoalsScored);
+					$(leagueTableRow).find(".goalsConceeded").text(team.GoalsConceeded);
+					$(leagueTableRow).find(".goalDifference").text(team.goalDifference);
+					$("#leagueTable").append(leagueTableRow);
 				}
+				
+				$("#leagueTableRowTemplate").hide();
 			  },
 			  error: function(err, err2) {
 				  console.log("drawLeagueTable() error!");
