@@ -17,4 +17,5 @@ public class Match {
 	public int Round;
 	public int MinutesGone;
 	public int Half;
+	public Ball Ball;
 }
