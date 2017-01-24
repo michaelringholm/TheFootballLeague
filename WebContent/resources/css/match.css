@@ -1,0 +1,8 @@
+#matchWidget {
+	color: #ffffff;
+	width: 1600px; height: 1024px; 
+	background-image:url('<c:url value="/resources/images/match-background2.jpg" />'); 
+	background-size: contain; 
+	background-repeat: no-repeat; 
+	background-position: top center;	
+}

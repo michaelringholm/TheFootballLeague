@@ -20,22 +20,55 @@ function Match() {
 				console.log("updateMatchWidget() success!");
 								
 				_this.updateClock(match);
+				_this.drawPlayers();				
+			  },
+			  error: function(err, err2) {
+				  console.log("drawLeagueTable() error!");
+				  console.log("drawLeagueTable() error!");
+				  console.log("drawLeagueTable() error!");
+			  },			  
+			  complete: function() { 
+				console.log("drawLeagueTable() complete."); 
+			  }
+		});
+	};
+	
+	this.drawPlayers = function(match) {
+		_this.drawHomeTeamPlayers();
+		_this.drawAwayTeamPlayers();
+	};
+	
+	this.drawHomeTeamPlayers = function() {
+		var playerCardTemplate = $("#playerCardTemplate");
+		var playerCard = playerCardTemplate.clone();
+		$(playerCard).removeAttr("id");
+		$("#homeAttack").append(playerCard);
+		$("#homeAttack").append(playerCard);
+		$("#homeAttack").append(playerCard);
+	};
+	
+	this.drawAwayTeamPlayers = function() {
+		var playerCardTemplate = $("playerCardTemplate");
+		var playerCard = playerCardTemplate.clone();
+		$("#homeAttack").append(playerCard);
+		$("#homeAttack").append(playerCard);
+		$("#homeAttack").append(playerCard);
+	};
+		
+	
+	this.updateMatchWidgetOld = function(teamId) {
+		var data = {};
+		data.teamId = teamId;
+		$.ajax({
+			  type: "POST",
+			  url: _this.appRoot + "/match/advance",
+			  data: data,			  
+			  success: function(match) { 
+				console.log("updateMatchWidget() success!");
+								
+				_this.updateClock(match);
 				_this.animate(match);				
 				
-				/*$("#leagueName").text(league.Name);
-				for(var i=0; i<league.Teams.length; i++) {
-					var leagueTableRow = $("#leagueTableRowTemplate").clone();
-					$(leagueTableRow).removeAttr("id");
-					var team = league.Teams[i];
-					$(leagueTableRow).find(".leaguePosition").text(team.LeaguePosition);
-					$(leagueTableRow).find(".teamName").text(team.Name);
-					$(leagueTableRow).find(".goalsScored").text(team.GoalsScored);
-					$(leagueTableRow).find(".goalsConceeded").text(team.GoalsConceeded);
-					$(leagueTableRow).find(".goalDifference").text(team.goalDifference);
-					$("#leagueTable").append(leagueTableRow);
-				}
-				
-				$("#leagueTableRowTemplate").hide();*/
 			  },
 			  error: function(err, err2) {
 				  console.log("drawLeagueTable() error!");
