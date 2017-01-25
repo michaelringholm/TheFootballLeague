@@ -20,7 +20,7 @@ function Match() {
 				console.log("updateMatchWidget() success!");
 								
 				_this.updateClock(match);
-				_this.drawPlayers();				
+				_this.drawPlayers(match);			
 			  },
 			  error: function(err, err2) {
 				  console.log("drawLeagueTable() error!");
@@ -34,25 +34,37 @@ function Match() {
 	};
 	
 	this.drawPlayers = function(match) {
-		_this.drawHomeTeamPlayers();
-		_this.drawAwayTeamPlayers();
+		_this.drawHomeTeam(match.HomeTeam);
+		_this.drawAwayTeam(match.AwayTeam);
+		$("#playerCardTemplate").hide();
 	};
 	
-	this.drawHomeTeamPlayers = function() {
+	this.addPlayer = function(player, isHomeTeam) {
 		var playerCardTemplate = $("#playerCardTemplate");
 		var playerCard = playerCardTemplate.clone();
 		$(playerCard).removeAttr("id");
-		$("#homeAttack").append(playerCard);
-		$("#homeAttack").append(playerCard);
-		$("#homeAttack").append(playerCard);
+		$(playerCard).find(".playerName").text(player.Name);
+		
+		if(player.Position == "Attack") {
+			if(isHomeTeam)
+				$("#homeAttack").append(playerCard);
+			else
+				$("#awayAttack").append(playerCard);
+		}
+		
+		return playerCard;
 	};
 	
-	this.drawAwayTeamPlayers = function() {
-		var playerCardTemplate = $("playerCardTemplate");
-		var playerCard = playerCardTemplate.clone();
-		$("#homeAttack").append(playerCard);
-		$("#homeAttack").append(playerCard);
-		$("#homeAttack").append(playerCard);
+	this.drawHomeTeam = function(team) {
+		for(var playerIndex=0; playerIndex<team.Players.length; playerIndex++) {
+			_this.addPlayer(team.Players[playerIndex], true);
+		}
+	};
+	
+	this.drawAwayTeam = function(team) {
+		for(var playerIndex=0; playerIndex<team.Players.length; playerIndex++) {
+			_this.addPlayer(team.Players[playerIndex], false);
+		}
 	};
 		
 	

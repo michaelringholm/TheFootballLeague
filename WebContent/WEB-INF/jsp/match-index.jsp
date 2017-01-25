@@ -27,7 +27,7 @@
  			<div id="homeKeeper"></div>
  		</div>
  		<div id="awayTeamWidget" style="display: inline-block; width: 700px; height: 700px; border: solid 2px #ffffff; margin: 20px; border-radius: 8px;">
- 			<div id="awayAttack"></div>
+ 			<div id="awayAttack" style="width: 660px; height: 200px; border: solid 2px #ffffff; margin: 20px; border-radius: 8px;"></div>
  			<div id="awayMidfield"></div>
  			<div id="awayDefence"></div>
  			<div id="awayKeeper"></div>
